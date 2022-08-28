@@ -7,19 +7,20 @@ interface Props {
   handleAdd: (e: React.FormEvent) => void;
 }
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }: Props) => {
-  const inputRef = useRef<HTMLInputElement>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   return (
     <form
       action=""
+      ref={formRef}
+      tabIndex={0}
       className="input "
       onSubmit={(e) => {
         handleAdd(e);
-        // removes the keyboard focus from input element
-        inputRef.current?.blur();
+        // removes the keyboard focus from form element
+        formRef.current?.blur();
       }}
     >
       <input
-        ref={inputRef}
         type="text"
         name=""
         id=""
