@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Neucha&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oxygen:wght@400;700&display=swap");
 /* Box sizing rules */
 *,
 *::before,
@@ -78,7 +78,8 @@ select {
 }
 
 :root {
-  --font-family-pry: "Neucha", cursive;
+  --font-family-pry: "Oxygen", sans-serif;
+  --font-family-sec: "Bungee Inline", cursive;
 
   /* fluid typescale */
   --step--5: clamp(0.4rem, calc(0.4rem + 0.01vw), 0.41rem);
@@ -117,7 +118,6 @@ select {
 
 body {
   font-family: var(--font-family-pry);
-  background-color: #2f74c0;
   font-size: var(--step-0);
 }
 

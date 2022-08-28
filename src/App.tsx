@@ -56,9 +56,7 @@ const App: React.FC = () => {
       <main>
         <section>
           <div className="container stack-s-m box-m-l">
-            <h1 className="heading is-uppercase text-centered color-white">
-              Taskify
-            </h1>
+            <h1 className="heading is-uppercase text-centered ">Taskify</h1>
             <div className="stack-m-l">
               <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
               <TodoList

@@ -21,14 +21,15 @@
   align-items: center;
   gap: var(--space-2xs);
   border-radius: var(--space-2xs);
-  background-color: rgb(50, 195, 205);
+  background-color: rgb(244, 162, 97);
 }
 .todos[data-state="completed"] {
-  background-color: rgb(235, 103, 80);
+  background-color: rgb(231, 111, 81);
 }
 .todos__heading {
   color: #fff;
-  letter-spacing: var(--space-3xs);
+  /* letter-spacing: var(--space-3xs); */
+  font-family: var(--font-family-sec);
 }
 
 .drag-active {

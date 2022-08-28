@@ -2,4 +2,6 @@
   position: relative;
   z-index: 1;
   letter-spacing: var(--space-3xs);
+  color: rgb(38, 70, 83);
+  font-family: var(--font-family-sec);
 }
