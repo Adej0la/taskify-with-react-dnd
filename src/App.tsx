@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import reactLogo from "./assets/react.svg";
 import "./App.css";
 import { Todo } from "./model";
 import InputField from "./components/input-field/InputField";
@@ -15,7 +16,7 @@ const App: React.FC = () => {
     e.preventDefault();
 
     todo
-      ? (setTodos([...todos, { id: Date.now(), todo: todo, isDone: false }]),
+      ? (setTodos([...todos, { id: Date.now(), todo: "todo", isDone: false }]),
         setTodo(""))
       : null;
   };
@@ -42,12 +43,13 @@ const App: React.FC = () => {
     }
 
     if (destination.droppableId === "TodosList") {
-      add = active[destination.index];
-      active.splice(destination.index, 1);
+      active.splice(destination.index, 0, add);
     } else {
-      add = complete[destination.index];
-      complete.splice(destination.index, 1);
+      complete.splice(destination.index, 0, add);
     }
+
+    setCompletedTodos(complete);
+    setTodos(active);
   };
   return (
     <DragDropContext onDragEnd={onDragEnd}>
